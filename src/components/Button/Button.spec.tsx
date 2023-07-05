@@ -3,7 +3,11 @@ import Button from "./Button";
 
 describe("Button Component", () => {
   it("should disable style background red", () => {
-    render(<Button disable onClick={() => {}} />);
+    render(
+      <Button disable onClick={() => {}}>
+        Click me
+      </Button>
+    );
 
     const button = screen.getByRole("button", { name: "Click me" });
 
@@ -13,7 +17,11 @@ describe("Button Component", () => {
   it("should call on click prop on click", () => {
     const onClick = jest.fn();
 
-    render(<Button disable onClick={onClick} />);
+    render(
+      <Button disable onClick={onClick}>
+        Click me
+      </Button>
+    );
 
     const button = screen.getByText("Click me");
 
@@ -25,7 +33,11 @@ describe("Button Component", () => {
   it("should call with parameter", () => {
     const onClick = jest.fn();
 
-    render(<Button disable onClick={onClick} />);
+    render(
+      <Button disable onClick={onClick}>
+        Click me
+      </Button>
+    );
 
     const button = screen.getByText("Click me");
 

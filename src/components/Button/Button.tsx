@@ -1,9 +1,13 @@
+import { ReactNode } from "react";
+
 const Button = ({
   disable,
   onClick,
+  children,
 }: {
   disable: boolean;
-  onClick: (number: number) => void;
+  onClick: (number?: number) => void;
+  children: ReactNode;
 }) => {
   return (
     <button
@@ -14,7 +18,7 @@ const Button = ({
       }}
       onClick={() => onClick(10)}
     >
-      Click me
+      {children}
     </button>
   );
 };

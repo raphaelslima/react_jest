@@ -8,7 +8,9 @@ function App() {
     <div>
       <h1>Hello world!</h1>
       <p>{msg}</p>
-      <Button disable={true} onClick={() => setMsg("msg changed")} />
+      <Button disable={true} onClick={() => setMsg("msg changed")}>
+        Click me
+      </Button>
     </div>
   );
 }
