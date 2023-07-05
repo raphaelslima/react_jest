@@ -9,6 +9,8 @@ const Button = ({
     <button
       style={{
         background: disable ? "red" : "blue",
+        padding: 10,
+        color: "#fff",
       }}
       onClick={() => onClick(10)}
     >

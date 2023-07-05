@@ -32,6 +32,12 @@ describe("Button Component", () => {
     fireEvent.click(button);
 
     expect(onClick).toHaveBeenCalledWith(10);
+
+    const holdMsg = screen.queryByText(
+      "Let's learn more about testing in React"
+    );
+
+    expect(holdMsg).toBeNull();
   });
 });
 
